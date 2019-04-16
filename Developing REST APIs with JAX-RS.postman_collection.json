@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "0c4fec3e-1ec7-4652-a5b4-159edff34496",
+		"name": "Developing REST APIs with JAX-RS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/messenger/webapi/messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/messenger/webapi/messages",
+				"description": "GET all messages"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/messages/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/messenger/webapi/messages/1",
+				"description": "GET first message"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/messages",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\": \"koushik\",\n\t\"created\": \"2019-05-16T09:58:54.323\",\n\t\"id\": 3,\n     \"links\": [],\n     \"message\": \"Hello World New!!!!\"\n}"
+				},
+				"url": "http://localhost:8080/messenger/webapi/messages",
+				"description": "POST a new message."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/messages",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\": \"koushik\",\n\t\"created\": \"2019-05-16T09:58:54.323\",\n\t\"id\": 3,\n     \"links\": [],\n     \"message\": \"Hello World New!!!! (modified)\"\n}"
+				},
+				"url": "http://localhost:8080/messenger/webapi/messages/3",
+				"description": "PUT (modfy) a message."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/messages",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\": \"koushik\",\n\t\"created\": \"2019-05-16T09:58:54.323\",\n\t\"id\": 3,\n     \"links\": [],\n     \"message\": \"Hello World New!!!! (modified)\"\n}"
+				},
+				"url": "http://localhost:8080/messenger/webapi/messages/3",
+				"description": "DELETE a message."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/messages/1/comments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/messenger/webapi/messages/1/comments",
+				"description": "GET message comments."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/messages/1/comments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\": \"dani\",\n\t\"created\": \"2019-05-16T09:58:54.323\",\n\t\"id\": 1,\n    \"links\": [],\n    \"message\": \"Comentario 1\"\n}"
+				},
+				"url": "http://localhost:8080/messenger/webapi/messages/1/comments",
+				"description": "POST a message comment."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/messages/1/comments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\": \"lucas\",\n\t\"created\": \"2019-05-16T09:58:54.323\",\n\t\"id\": 1,\n    \"links\": [],\n    \"message\": \"Comentario 1\"\n}"
+				},
+				"url": "http://localhost:8080/messenger/webapi/messages/1/comments",
+				"description": "POST another message comment."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/messages/1/comments/2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\": \"juan\",\n\t\"created\": \"2019-05-16T09:58:54.323\",\n\t\"id\": 1,\n    \"links\": [],\n    \"message\": \"Comentario 2\"\n}"
+				},
+				"url": "http://localhost:8080/messenger/webapi/messages/1/comments/2",
+				"description": "PUT (modify) a message comment."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/messages/1/comments/2",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/messenger/webapi/messages/1/comments/2",
+				"description": "DELETE a message comment."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/profiles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "applcation/jsom",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/messenger/webapi/profiles",
+				"description": "GET profiles."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/profiles",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"Daniel\",\n    \"id\": 2,\n    \"lastName\": \"Alonso\",\n    \"profileName\": \"dalonso\"\n}"
+				},
+				"url": "http://localhost:8080/messenger/webapi/profiles",
+				"description": "POST a new profile."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/profiles/dalonso",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/messenger/webapi/profiles/dalonso",
+				"description": "GET a profile."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/profiles/dalonso",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Daniel\",\n    \"id\": 2,\n    \"lastName\": \"Perez\",\n    \"profileName\": \"dalonso\"\n}"
+				},
+				"url": "http://localhost:8080/messenger/webapi/profiles/dalonso",
+				"description": "PUT (modfy) a profile."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/profiles/dalonso",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/messenger/webapi/profiles/dalonso",
+				"description": "DELETE a profile."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/injectdemo/annotations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authSessionID",
+						"value": "12313253434"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/messenger/webapi/injectdemo/annotations;param=value",
+				"description": "InjectDemo annotations"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/messenger/webapi/injectdemo/context",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authSessionID",
+						"value": "12313253434"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/messenger/webapi/injectdemo/context",
+				"description": "InjectDemo context."
+			},
+			"response": []
+		}
+	]
+}

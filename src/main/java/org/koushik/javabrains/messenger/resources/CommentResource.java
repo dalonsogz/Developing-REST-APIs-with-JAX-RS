@@ -20,7 +20,7 @@ import org.koushik.javabrains.messenger.service.CommentService;
 @Consumes(MediaType.APPLICATION_JSON)
 public class CommentResource {
 
-	private CommentService commentService = new CommentService();
+	private CommentService commentService = CommentService.getCommentService();
 	
 	@GET
 	public List<Comment> getAllComments(@PathParam("messageId") long messageId) {

@@ -16,7 +16,16 @@ import org.koushik.javabrains.messenger.model.Message;
 
 public class CommentService {
 	
+	private static CommentService myCommentService = null;
+	
 	private Map<Long, Message> messages = DatabaseClass.getMessages();
+	
+	public static CommentService getCommentService() {
+		if (myCommentService == null) {
+			myCommentService = new CommentService();
+		}
+		return myCommentService;
+	}
 	
 	public List<Comment> getAllComments(long messageId) {
 		Map<Long, Comment> comments = messages.get(messageId).getComments();

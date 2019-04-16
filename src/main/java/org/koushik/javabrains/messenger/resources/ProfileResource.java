@@ -20,7 +20,7 @@ import org.koushik.javabrains.messenger.service.ProfileService;
 @Produces(MediaType.APPLICATION_JSON)
 public class ProfileResource {
 
-	private ProfileService profileService = new ProfileService();
+	private ProfileService profileService = ProfileService.getProfileService();
 	
 	
 	

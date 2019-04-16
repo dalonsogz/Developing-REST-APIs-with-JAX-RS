@@ -8,12 +8,22 @@ import java.util.Map;
 import org.koushik.javabrains.messenger.database.DatabaseClass;
 import org.koushik.javabrains.messenger.exception.DataNotFoundException;
 import org.koushik.javabrains.messenger.model.Message;
+import org.koushik.javabrains.messenger.resources.MessageResource;
 
 public class MessageService {
 
+	private static MessageService myMessageService = null;
+	
 	private Map<Long, Message> messages = DatabaseClass.getMessages();
 	
-	public MessageService() {
+	public static MessageService getMessageService() {
+		if (myMessageService == null) {
+			myMessageService = new MessageService();
+		}
+		return myMessageService;
+	}
+	
+	private MessageService() {
 		messages.put(1L, new Message(1, "Hello World", "koushik"));
 		messages.put(2L, new Message(2, "Hello Jersey", "koushik"));
 	}

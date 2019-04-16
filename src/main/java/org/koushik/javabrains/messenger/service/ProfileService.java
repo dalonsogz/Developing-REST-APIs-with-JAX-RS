@@ -9,9 +9,18 @@ import org.koushik.javabrains.messenger.model.Profile;
 
 public class ProfileService {
 
+	private static ProfileService myProfileService = null;
+	
 	private Map<String, Profile> profiles = DatabaseClass.getProfiles();
 	
-	public ProfileService() {
+	public static ProfileService getProfileService() {
+		if (myProfileService == null) {
+			myProfileService = new ProfileService();
+		}
+		return myProfileService;
+	}
+	
+	private ProfileService() {
 		profiles.put("koushik", new Profile(1L, "koushik", "Koushik", "Kothagal"));
 	}
 	
