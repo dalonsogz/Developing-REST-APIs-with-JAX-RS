@@ -18,7 +18,6 @@ import org.koushik.javabrains.messenger.service.CommentService;
 @Path("/")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-
 public class CommentResource {
 
 	private CommentService commentService = new CommentService();
@@ -30,7 +29,8 @@ public class CommentResource {
 	
 	@POST
 	public Comment addComment(@PathParam("messageId") long messageId, Comment comment) {
-		return commentService.addComment(messageId, comment);
+		Comment newComment = commentService.addComment(messageId, comment);
+		return newComment;
 	}
 	
 	@PUT
