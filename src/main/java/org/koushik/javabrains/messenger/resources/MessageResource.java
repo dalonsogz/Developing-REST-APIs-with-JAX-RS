@@ -20,7 +20,7 @@ import javax.ws.rs.core.UriInfo;
 import org.koushik.javabrains.messenger.model.Message;
 import org.koushik.javabrains.messenger.resources.beans.MessageFilterBean;
 import org.koushik.javabrains.messenger.service.MessageService;
-import org.koushik.javabrains.messenger.service.ProfileService;
+
 
 @Path("/messages")
 @Consumes(MediaType.APPLICATION_JSON)

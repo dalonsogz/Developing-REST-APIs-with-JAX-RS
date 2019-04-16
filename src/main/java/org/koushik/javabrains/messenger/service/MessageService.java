@@ -8,7 +8,6 @@ import java.util.Map;
 import org.koushik.javabrains.messenger.database.DatabaseClass;
 import org.koushik.javabrains.messenger.exception.DataNotFoundException;
 import org.koushik.javabrains.messenger.model.Message;
-import org.koushik.javabrains.messenger.resources.MessageResource;
 
 public class MessageService {
 
